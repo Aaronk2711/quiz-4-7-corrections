@@ -18,6 +18,33 @@ Correct Answer: False, 0, Undefined, NaN, "", null
 
 Although all of my answers were correct, they were not all the applicable ones to the question. The term falsey refers to all values, that when left by themselves, would evaluate to false. These are slightly ambiguous terms so an empty string and 0 are examples of those and therefore are correct answers. 
 
+### Question 11
+
+Correct Answer:
+
+function offToCollege(){
+  let favCollege = prompt("What is your favorite college?");
+  let totalCost = prompt("Please enter the approximate cost of staying at " + favCollege + " for all 4 years.");
+  document.getElementById("off-to-college").innerHTML = favCollege + " is a pretty expensive school! It'll cost you $" + (totalCost/4) + " per year!"
+}
+
+function carpool(){
+  let friends = Number(prompt("How many friends do you want to bring to the movies?"));
+  let suvAvailable = Number(prompt("How many SUVS are available for driving?"));
+  let suvNeeded = Math.floor(numOfFriends/7);
+  let suvs;
+  let sedans;
+  if(suvNeeded>suvAvailable){
+    suvs = suvAvailable;
+    sedans = Math.ceil((friends-(7*suvAvailable))/4);
+    console.log(suvs + " parents who drive SUVs and " + sedans + " parents who drive sedans are required to transport the " + friends + " friends to the movies." ); }
+    else if(suvNeeded<suvAvailable){
+    suvs = suvsNeeded;
+    sedans = Math.ceil((numOfFriends-(7*suvsNeeded))/4);
+    console.log(suvs + " parents who drive SUVs and " + sedans + " parents who drive sedans are required to transport the " + numOfFriends + " friends to the movies." );
+  }
+}
+
 ## Quiz 5:
 
 ### Question 2
@@ -120,7 +147,55 @@ Although my answer was partially correct, it did not account for all possible an
 
 ## Quiz 6:
 
+### Question 1
+
+My Answer: The name of the function is mystery, The function is designed to return a value, The function is not designed to accept any parameters
+
+Correct Answer: Although two of my answers were correct, the one that said that the function is designed to return a value is incorrect. Although plausible for this function to return a value, not enough details have been given to concretely say so.
+
+### Question 3
+
+My Answer: I need to do homework, chores, and more homework... So busy!; I need to do chores, homework, and... So busy!; I need to do homework, homework, and more homework... So busy!
+
+Correct Answer: I need to do homework, chores, and more homework... So busy!; I need to do chores, homework, and undefined... So busy!;I need to do homework, homework, and more homework... So busy!;
+
+As in previous questons, I had two of the answers correct but only one wrong. This time, when one of the parameters was undefined, I assumed that it would not return anything and thus would be left blank in the string. However, the value was set to undefined and it was printed in the statement, making my answer incorrect.
+
+### Question 4
+
+My Answer:
+
+function divide(a, b) {
+    a = Number(prompt("Enter a number."));
+    b = Number(prompt("Enter another number."));
+
+    return a / b;
+}
+
+Correct Answer:
+
+function divide(a, b) {
+    return a / b;
+}
+
+My answer was incorrect because of my two statements in the function. In the definition of the function, it asks for two parameters already, which will be divided. Because of this, I do not need to prompt the user for the number. Rather, I must enter the numbers myself so that they can be divided.
+
+### Question 15
+
+My Answer: False
+
+Correct Answer: True
+
+This question asks if the declaration of a variable using var within a block effectively pushes it up to the function scope. At first I said that it was wrong but this is incorrect. The reason that I thought it was incorrect was because I thought it would go to the global scope and surpass the function scope entirely. However, I was wrong and it only went up one scope, which makes the answer true.
+
 ## Quiz 7:
 
+### Question 4
+
+My Answer: cars.includes(car)
+
+Correct Answer: cars.includes(car), cars.lastIndexOf(car) !== -1, cars.indexOf(car) !== -1
+
+Again, I got this question partially right but not completely. Although cars.includes is a fair way of determining if a value is found within an array, it is also possible to use .lastIndexOf and indexOf to determine if the index of the specific car we are looking for is even valid. This is why my answer is only partially right.
 
 
